@@ -48,9 +48,9 @@ class Baseline_cbr_mb(tf.keras.Model):
     def __init__(self, override_min_max_scores=None, name=None):
         super(Baseline_cbr_mb, self).__init__()
 
-        self.iterations = 4
-        self.path_state_dim = 64
-        self.link_state_dim = 64
+        self.iterations = 8
+        self.path_state_dim = 32
+        self.link_state_dim = 32
 
         if override_min_max_scores is not None:
             self.set_min_max_scores(override_min_max_scores)
@@ -206,9 +206,9 @@ class Baseline_cbr_mb(tf.keras.Model):
                 path_state_sequence, path_to_link, name="PathToRLink"
             )
 
-            print("path_gather*********", path_gather.shape)
+            
             path_sum = tf.math.reduce_sum(path_gather, axis=1)
-            print("path_sum*********", path_sum.shape)
+            
             
 
             link_state, _ = self.link_update(path_sum, states=link_state)

@@ -1,0 +1,150 @@
+[ec2-user@ip-172-31-20-106 ~]$ python3 /home/ec2-user/gnnet-ch23-dataset-cbr-mb/GNNetworkingChallenge-2023_RealNetworkDT/train.py -ds MB0
+2023-10-08 20:51:02.488877: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-10-08 20:51:02.665112: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-10-08 20:51:02.665151: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-10-08 20:51:03.710711: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-10-08 20:51:03.710799: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-10-08 20:51:03.710808: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-10-08 20:51:04.397921: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-10-08 20:51:04.397973: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-10-08 20:51:04.398003: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (ip-172-31-20-106.eu-north-1.compute.internal): /proc/driver/nvidia/version does not exist
+2023-10-08 20:51:04.398292: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+restore_ckpt = False, training from scratch
+Epoch 1/50
+3380/3380 [==============================] - ETA: 0s - loss: 67.5927        
+Epoch 1: val_loss improved from inf to 58.02555, saving model to ckpt/Baseline_cbr_mb/01-58.0256
+3380/3380 [==============================] - 312s 84ms/step - loss: 67.5927 - val_loss: 58.0256 - lr: 0.0010
+Epoch 2/50
+3380/3380 [==============================] - ETA: 0s - loss: 57.3360  
+Epoch 2: val_loss improved from 58.02555 to 57.87112, saving model to ckpt/Baseline_cbr_mb/02-57.8711
+3380/3380 [==============================] - 315s 93ms/step - loss: 57.3360 - val_loss: 57.8711 - lr: 0.0010
+Epoch 3/50
+3380/3380 [==============================] - ETA: 0s - loss: 56.8474  
+Epoch 3: val_loss improved from 57.87112 to 57.27630, saving model to ckpt/Baseline_cbr_mb/03-57.2763
+3380/3380 [==============================] - 292s 86ms/step - loss: 56.8474 - val_loss: 57.2763 - lr: 0.0010
+Epoch 4/50
+3380/3380 [==============================] - ETA: 0s - loss: 55.8316  
+Epoch 4: val_loss improved from 57.27630 to 54.76376, saving model to ckpt/Baseline_cbr_mb/04-54.7638
+3380/3380 [==============================] - 271s 80ms/step - loss: 55.8316 - val_loss: 54.7638 - lr: 0.0010
+Epoch 5/50
+3380/3380 [==============================] - ETA: 0s - loss: 54.2308  
+Epoch 5: val_loss improved from 54.76376 to 54.36784, saving model to ckpt/Baseline_cbr_mb/05-54.3678
+3380/3380 [==============================] - 293s 87ms/step - loss: 54.2308 - val_loss: 54.3678 - lr: 0.0010
+Epoch 6/50
+3380/3380 [==============================] - ETA: 0s - loss: 53.6500  
+Epoch 6: val_loss improved from 54.36784 to 54.31898, saving model to ckpt/Baseline_cbr_mb/06-54.3190
+3380/3380 [==============================] - 339s 100ms/step - loss: 53.6500 - val_loss: 54.3190 - lr: 0.0010
+Epoch 7/50
+3380/3380 [==============================] - ETA: 0s - loss: 54.1554  
+Epoch 7: val_loss did not improve from 54.31898
+3380/3380 [==============================] - 288s 85ms/step - loss: 54.1554 - val_loss: 54.3717 - lr: 0.0010
+Epoch 8/50
+3380/3380 [==============================] - ETA: 0s - loss: 52.3213  
+Epoch 8: val_loss did not improve from 54.31898
+3380/3380 [==============================] - 298s 88ms/step - loss: 52.3213 - val_loss: 56.5855 - lr: 0.0010
+Epoch 9/50
+3380/3380 [==============================] - ETA: 0s - loss: 51.1899  
+Epoch 9: val_loss improved from 54.31898 to 46.68883, saving model to ckpt/Baseline_cbr_mb/09-46.6888
+3380/3380 [==============================] - 280s 83ms/step - loss: 51.1899 - val_loss: 46.6888 - lr: 0.0010
+Epoch 10/50
+3380/3380 [==============================] - ETA: 0s - loss: 50.9671  
+Epoch 10: val_loss did not improve from 46.68883
+3380/3380 [==============================] - 265s 78ms/step - loss: 50.9671 - val_loss: 52.2585 - lr: 0.0010
+Epoch 11/50
+3380/3380 [==============================] - ETA: 0s - loss: 50.7008  
+Epoch 11: val_loss did not improve from 46.68883
+3380/3380 [==============================] - 262s 77ms/step - loss: 50.7008 - val_loss: 52.7063 - lr: 0.0010
+Epoch 12/50
+3380/3380 [==============================] - ETA: 0s - loss: 50.3911  
+Epoch 12: val_loss did not improve from 46.68883
+3380/3380 [==============================] - 263s 78ms/step - loss: 50.3911 - val_loss: 51.3819 - lr: 0.0010
+Epoch 13/50
+3380/3380 [==============================] - ETA: 0s - loss: 48.3833  
+Epoch 13: val_loss did not improve from 46.68883
+3380/3380 [==============================] - 263s 78ms/step - loss: 48.3833 - val_loss: 47.2302 - lr: 0.0010
+Epoch 14/50
+3380/3380 [==============================] - ETA: 0s - loss: 47.1600  
+Epoch 14: val_loss did not improve from 46.68883
+
+Epoch 14: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+3380/3380 [==============================] - 257s 76ms/step - loss: 47.1600 - val_loss: 47.5524 - lr: 0.0010
+Epoch 15/50
+3380/3380 [==============================] - ETA: 0s - loss: 43.4578  
+Epoch 15: val_loss improved from 46.68883 to 44.41785, saving model to ckpt/Baseline_cbr_mb/15-44.4179
+3380/3380 [==============================] - 298s 88ms/step - loss: 43.4578 - val_loss: 44.4179 - lr: 5.0000e-04
+Epoch 16/50
+3380/3380 [==============================] - ETA: 0s - loss: 42.2122  
+Epoch 16: val_loss improved from 44.41785 to 43.84734, saving model to ckpt/Baseline_cbr_mb/16-43.8473
+3380/3380 [==============================] - 284s 84ms/step - loss: 42.2122 - val_loss: 43.8473 - lr: 5.0000e-04
+Epoch 17/50
+3380/3380 [==============================] - ETA: 0s - loss: 41.3206  
+Epoch 17: val_loss improved from 43.84734 to 43.27430, saving model to ckpt/Baseline_cbr_mb/17-43.2743
+3380/3380 [==============================] - 265s 78ms/step - loss: 41.3206 - val_loss: 43.2743 - lr: 5.0000e-04
+Epoch 18/50
+3380/3380 [==============================] - ETA: 0s - loss: 41.7679  
+Epoch 18: val_loss did not improve from 43.27430
+3380/3380 [==============================] - 263s 78ms/step - loss: 41.7679 - val_loss: 44.8386 - lr: 5.0000e-04
+Epoch 19/50
+3380/3380 [==============================] - ETA: 0s - loss: 40.8223  
+Epoch 19: val_loss did not improve from 43.27430
+3380/3380 [==============================] - 270s 80ms/step - loss: 40.8223 - val_loss: 44.2989 - lr: 5.0000e-04
+Epoch 20/50
+3380/3380 [==============================] - ETA: 0s - loss: 40.3198  
+Epoch 20: val_loss improved from 43.27430 to 43.09146, saving model to ckpt/Baseline_cbr_mb/20-43.0915
+3380/3380 [==============================] - 275s 81ms/step - loss: 40.3198 - val_loss: 43.0915 - lr: 5.0000e-04
+Epoch 21/50
+3380/3380 [==============================] - ETA: 0s - loss: 39.9769  
+Epoch 21: val_loss improved from 43.09146 to 42.65724, saving model to ckpt/Baseline_cbr_mb/21-42.6572
+3380/3380 [==============================] - 268s 79ms/step - loss: 39.9769 - val_loss: 42.6572 - lr: 5.0000e-04
+Epoch 22/50
+3380/3380 [==============================] - ETA: 0s - loss: 38.8269  
+Epoch 22: val_loss improved from 42.65724 to 41.92639, saving model to ckpt/Baseline_cbr_mb/22-41.9264
+3380/3380 [==============================] - 257s 76ms/step - loss: 38.8269 - val_loss: 41.9264 - lr: 5.0000e-04
+Epoch 23/50
+3380/3380 [==============================] - ETA: 0s - loss: 39.8486  
+Epoch 23: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 263s 78ms/step - loss: 39.8486 - val_loss: 43.7509 - lr: 5.0000e-04
+Epoch 24/50
+3380/3380 [==============================] - ETA: 0s - loss: 38.5687  
+Epoch 24: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 280s 83ms/step - loss: 38.5687 - val_loss: 43.6712 - lr: 5.0000e-04
+Epoch 25/50
+3380/3380 [==============================] - ETA: 0s - loss: 37.6459  
+Epoch 25: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 262s 78ms/step - loss: 37.6459 - val_loss: 43.4155 - lr: 5.0000e-04
+Epoch 26/50
+3380/3380 [==============================] - ETA: 0s - loss: 37.9695  
+Epoch 26: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 268s 79ms/step - loss: 37.9695 - val_loss: 44.2317 - lr: 5.0000e-04
+Epoch 27/50
+3380/3380 [==============================] - ETA: 0s - loss: 36.4269  
+Epoch 27: val_loss did not improve from 41.92639
+
+Epoch 27: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.
+3380/3380 [==============================] - 256s 76ms/step - loss: 36.4269 - val_loss: 46.8552 - lr: 5.0000e-04
+Epoch 28/50
+3380/3380 [==============================] - ETA: 0s - loss: 34.1284  
+Epoch 28: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 266s 79ms/step - loss: 34.1284 - val_loss: 45.3526 - lr: 2.5000e-04
+Epoch 29/50
+3380/3380 [==============================] - ETA: 0s - loss: 33.5559  
+Epoch 29: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 276s 82ms/step - loss: 33.5559 - val_loss: 44.8045 - lr: 2.5000e-04
+Epoch 30/50
+3380/3380 [==============================] - ETA: 0s - loss: 33.0600  
+Epoch 30: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 283s 84ms/step - loss: 33.0600 - val_loss: 44.1608 - lr: 2.5000e-04
+Epoch 31/50
+3380/3380 [==============================] - ETA: 0s - loss: 32.8332  
+Epoch 31: val_loss did not improve from 41.92639
+3380/3380 [==============================] - 294s 87ms/step - loss: 32.8332 - val_loss: 44.0881 - lr: 2.5000e-04
+Epoch 32/50
+3380/3380 [==============================] - ETA: 0s - loss: 32.4984  
+Epoch 32: val_loss did not improve from 41.92639
+
+Epoch 32: ReduceLROnPlateau reducing learning rate to 0.0001250000059371814.
+3380/3380 [==============================] - 296s 88ms/step - loss: 32.4984 - val_loss: 44.9686 - lr: 2.5000e-04
+845/845 [==============================] - 23s 27ms/step - loss: 41.9264
+Final evaluation: 41.926391601562

@@ -205,8 +205,8 @@ def predict(
 
 if __name__ == "__main__":
     import argparse
-    import models_updated
-    from train_updated import get_min_max_dict
+    import models
+    from train import get_min_max_dict
 
     parser = argparse.ArgumentParser(
         description="Use a trained model to generate predictions from"
@@ -238,9 +238,9 @@ if __name__ == "__main__":
 
     # Check the scenario
     if args.ds == "CBR+MB":
-        model = models_updated.Baseline_cbr_mb()
+        model = models.Baseline_cbr_mb()
     elif args.ds == "MB":
-        model = models_updated.Baseline_mb()
+        model = models.Baseline_mb()
     else:
         raise ValueError("Unrecognized dataset")
 
@@ -263,9 +263,9 @@ if __name__ == "__main__":
 
     # Select correct verification file
     ver_file_path = (
-        "/home/ec2-user/gnnet-ch23-dataset-cbr-mb/GNNetworkingChallenge-2023_RealNetworkDT/verification_files/submission_verification_toy.txt"
+        "verification_files/submission_verification_toy.txt"
         if args.toy
-        else "/home/ec2-user/gnnet-ch23-dataset-cbr-mb/GNNetworkingChallenge-2023_RealNetworkDT/verification_files/submission_verification.txt"
+        else "verification_files/submission_verification.txt"
     )
 
     # Load the test dataset
